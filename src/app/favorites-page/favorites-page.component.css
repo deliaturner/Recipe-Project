@@ -1,14 +1,15 @@
-.wrapper{
+.wrapper {
   height: 84vh;
   display: flex;
   align-items: center;
- justify-content: center;
+  justify-content: center;
 }
-.favoriteWrapper{
+
+.favoriteWrapper {
   display: flex;
- align-items: center;
- justify-content: center;
- height: 20%;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
 }
 
 .no-favorites {
@@ -25,7 +26,7 @@
 
 .favorite-recipes-container {
   width: 100vw;
-  height: 40%;
+  height: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   overflow-y: auto;
@@ -55,6 +56,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.individualFavoriteRecipe:hover .picture {
+  opacity: 0.3;
+  width: 100%;
+  height: 65%;
+}
+
+.picture {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .name {
@@ -66,6 +85,7 @@
 .trash-container {
   position: relative;
 }
+
 .trash {
   border: none;
   margin: auto;
@@ -73,9 +93,11 @@
   bottom: 2px;
   right: 2px;
 }
+
 .fa-trash {
   color: gray;
 }
+
 .fa-trash:hover {
   color: black;
 }
